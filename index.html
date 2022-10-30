@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coding Quiz</title>
+        <link rel="stylesheet" href="../week-4-solution/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <!--Intro segment-->
+            <div id="startpage">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer the following code-related questions within the time limit. </br> Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                <button id="startbtn">Start Quiz</button>
+                <button id="startPageHighscore" onclick="showHighscore()">View Highscores</button>
+            </div>
+
+            <!--Quiz segment-->
+            <div id="quiz">
+                <div id="timer">Timer</div>
+                <div id="questions"><p>Question</p></div>
+                <div><button id="a" onclick="checkAnswer('a')">A</button></div>
+                <div><button id="b" onclick="checkAnswer('b')">B</button></div>
+                <div><button id="c" onclick="checkAnswer('c')">C</button></div>
+                <div><button id="d" onclick="checkAnswer('d')">D</button></div>
+                <div id="result"></div>
+            </div>
+
+            <!--Endgame segment-->
+            <div id="gameover">
+                <div id="finalScore"></div>
+                <input type="text" size="40" placeholder="Enter initials" name="initials" id="initials"/>
+                <button id="submitScore">Submit</button>
+            </div>
+
+            <!--Highscore segment-->
+            <div id="highscoreContainer">
+                <div id="high-scorePage">
+                    <div id="highscore-header">
+                        <h3>User initials</h3>
+                        <h3>Highscores</h3>
+                    </div>
+
+                    <div id="highscore-initials"></div>
+                    <div id="highscore-score"></div>
+                </div>
+
+                <div id="endGameBtns">
+                    <button id="goBack" onclick="replayQuiz()">Go Back</button>
+                    <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+                </div>
+            </div>
+        </div>
+
+        <script src ="../week-4-solution/script.js"></script>
+    </body>
+</html>
